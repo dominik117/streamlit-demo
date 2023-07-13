@@ -16,7 +16,7 @@ def load_data(path):
     return df
 
 
-mpg_df_raw = load_data(path="./data/mpg.csv")
+mpg_df_raw = load_data(path="../data/mpg.csv")
 mpg_df = deepcopy(mpg_df_raw)
 
 # Add title and header
@@ -47,7 +47,7 @@ plot_type = right_column.radio("Choose Plot Type", plot_types)
 if year == "All":
     reduced_df = mpg_df
 else:
-    reduced_df = mpg_df[mpg_df["year"] == year]
+    reduced_df = mpg_df[mpg_df["Dog_race"] == year]
 
 means = reduced_df.groupby('class').mean()
 
